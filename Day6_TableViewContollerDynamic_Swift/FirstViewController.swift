@@ -33,7 +33,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "countryCellIdentifier")!
         
-        cell.accessoryType = .detailButton
+        //cell.accessoryType = .detailButton
         
         cell.textLabel?.text = self.countryNameList[indexPath.row]
         cell.detailTextLabel?.text = "CODE"

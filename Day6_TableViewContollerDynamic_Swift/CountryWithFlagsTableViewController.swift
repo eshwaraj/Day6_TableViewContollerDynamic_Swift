@@ -14,6 +14,9 @@ class CountryWithFlagsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // NOTE: - Registering the cell programmatically
+        //tableView.register(UITableViewCell.self, forCellReuseIdentifier: "countryIdentifier")
+
         getInitialCountryList()
 
         // Uncomment the following line to preserve selection between presentations
@@ -56,12 +59,16 @@ class CountryWithFlagsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return self.countryList.count
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Section \(section)"
     }
 
     
@@ -71,6 +78,7 @@ class CountryWithFlagsTableViewController: UITableViewController {
         let country  = self.countryList[indexPath.row]
         cell.textLabel?.text = country.countryName
         cell.detailTextLabel?.text = country.countryCode
+        
         cell.imageView?.image = UIImage(named: country.countryFlagImageName)
 
         return cell
