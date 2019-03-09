@@ -13,7 +13,7 @@
         <!--Country List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Country List" id="BYZ-38-t0r" customClass="ViewController" customModule="Day6_TableViewContollerDynamic_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Country List" id="BYZ-38-t0r" customClass="FirstViewController" customModule="Day6_TableViewContollerDynamic_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,7 +78,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="f02-KF-rsE" detailTextLabel="x2g-jC-YRm" style="IBUITableViewCellStyleValue1" id="JtJ-aS-dP8">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="countryIdentifier" textLabel="f02-KF-rsE" detailTextLabel="x2g-jC-YRm" style="IBUITableViewCellStyleValue1" id="JtJ-aS-dP8">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JtJ-aS-dP8" id="wTk-Xl-xdq">
