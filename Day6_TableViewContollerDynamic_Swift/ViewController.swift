@@ -17,16 +17,33 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     {
         super.viewDidLoad()
         
+        self.tvCountryList.delegate = self
+        self.tvCountryList.dataSource = self
+        
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return self.countryNameList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "countryCellIdentifier")!
+        
+        cell.accessoryType = .detailButton
+        
+        cell.textLabel?.text = self.countryNameList[indexPath.row]
+        cell.detailTextLabel?.text = "CODE"
+        cell.imageView?.image = UIImage(named: "canada")
+        return cell
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(self.countryNameList[indexPath.row])
+    }
 
 }
 
